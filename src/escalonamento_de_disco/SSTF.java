@@ -36,8 +36,6 @@ public class SSTF {
 			System.out.println("Requisição processada: " + proximaRequisicao);
 			disk.requisicoes.remove(removerRequisicao);
 		}
-		
 		System.out.println("\n");
 	}
-
 }
