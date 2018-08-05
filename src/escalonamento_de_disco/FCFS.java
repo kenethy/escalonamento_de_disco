@@ -1,7 +1,6 @@
 package escalonamento_de_disco;
 
 public class FCFS {
-
 	int proximaRequisicao;
 	int removerRequisicao;
 	int distancia;

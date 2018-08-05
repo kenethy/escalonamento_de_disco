@@ -24,6 +24,10 @@ public class SCAN {
 			if (disk.requisicoes.contains(i)) {
 				System.out.println("Requisição processada: " + i);
 				disk.requisicoes.remove(disk.requisicoes.indexOf(i));
+				
+				if(disk.requisicoes.size()==0) {
+					break;
+				}
 			}
 			else
 				System.out.println("<<<<< deslocamento no disco >>>>>");

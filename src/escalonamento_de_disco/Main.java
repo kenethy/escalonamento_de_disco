@@ -7,7 +7,7 @@ public class Main {
 		// (new FCFS()).run();
 		// (new C_LOOK()).run();
 		// (new LOOK()).run();
+		// (new SCAN()).run();
 		// (new C_SCAN()).run();
-		 (new SCAN()).run();
 	}
 }
