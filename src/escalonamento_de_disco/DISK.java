@@ -5,12 +5,15 @@ import java.util.Random;
 
 public class DISK {
 	ArrayList<Integer> requisicoes = new ArrayList<Integer>();
-	int[] disco = new int[40];
 	int posicao;
+	int tamanhoDisco;
 
 	public DISK() {
+		tamanhoDisco = 40;
+
 		int[] r = { 16, 9, 36, 12, 1, 34 };
 		// int[] r = { 1, 9, 12, 16, 34, 36 };
+
 		for (int i : r)
 			requisicoes.add(i);
 
