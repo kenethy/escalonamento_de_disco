@@ -9,6 +9,7 @@ public class LOOK {
 	}
 
 	public void run() {
+		// Ordenar as requisições para verificar o último elemento
 		
 		for (int i = disk.posicao; i < disk.tamanhoDisco; i++) {
 			if (disk.requisicoes.contains(i)) {
