@@ -8,11 +8,13 @@ public class SSTF {
 	int removerRequisicao;
 	DISK disk;
 
-	public SSTF() {
+	public SSTF() throws InterruptedException {
 		this.disk = new DISK();
 	}
 
-	public void run() {
+	public void run() throws InterruptedException {
+		System.out.println("-- SSTF --");
+
 		while (!disk.requisicoes.isEmpty()) {
 			menorDistancia = 40;
 			for (int i = 0; i < disk.requisicoes.size(); i++) {
@@ -24,18 +26,15 @@ public class SSTF {
 				}
 			}
 
-			System.out.println();
-
 			for (int i = 0; i < menorDistancia; i++) {
 				System.out.println("<<<<< deslocamento no disco >>>>>");
+				disk.sleep();
 			}
 
-			System.out.println();
-
 			disk.posicao = proximaRequisicao;
-			System.out.println("Requisição processada: " + proximaRequisicao);
+			System.err.println("Requisição processada: " + proximaRequisicao);
 			disk.requisicoes.remove(removerRequisicao);
+			disk.sleep();
 		}
-		System.out.println("\n");
 	}
 }

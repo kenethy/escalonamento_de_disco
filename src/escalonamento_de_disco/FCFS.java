@@ -6,23 +6,25 @@ public class FCFS {
 	int distancia;
 	DISK disk;
 
-	public FCFS() {
+	public FCFS() throws InterruptedException {
 		this.disk = new DISK();
 	}
 
-	public void run() {
+	public void run() throws InterruptedException {
+		
+		System.out.println("-- FCFS --");
 		for (Integer requisicao : disk.requisicoes) {
 
 			distancia = Math.abs(requisicao - disk.posicao);
-			System.out.println();
 
 			for (int i = 0; i < distancia; i++) {
 				System.out.println("<<<<< deslocamento no disco >>>>>");
+				disk.sleep();
 			}
 
-			System.out.println();
-			System.out.println("Requisição processada: " + requisicao.intValue());
+			System.err.println("Requisição processada: " + requisicao.intValue());
 			disk.posicao = requisicao;
+			disk.sleep();
 		}
 	}
 }
