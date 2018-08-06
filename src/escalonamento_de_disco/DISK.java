@@ -25,7 +25,7 @@ public class DISK {
 		sleep();
 		
 		Random pos = new Random();
-		posicao = pos.nextInt(40);
+		posicao = pos.nextInt(tamanhoDisco);
 
 		System.err.println("Cabeça de gravação na posição: " + posicao);
 		sleep();

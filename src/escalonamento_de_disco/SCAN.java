@@ -13,7 +13,7 @@ public class SCAN {
 		System.out.println("-- SCAN --");
 		for (int i = disk.posicao; i < disk.tamanhoDisco; i++) {
 			if (disk.requisicoes.contains(i)) {
-				System.out.println("Requisição processada: " + i);
+				System.err.println("Requisição processada: " + i);
 				disk.requisicoes.remove(disk.requisicoes.indexOf(i));
 			}
 			else
